@@ -29,40 +29,10 @@ async function createCmd(Client, guildId) {
             }
         ],
     },
-    {
-        name: 'links',
-        description: 'blacklist all the bad links',
-        options: [{
-            name: 'vælg',
-            description: 'Vælg: Tilføj eller fjern',
-            type: 'STRING',
-            choices: [
-                {
-                    name: 'add',
-                    value: 'add'
-                },
-                {
-                    name: 'remove',
-                    value: 'remove'
-                },
-            ],
-            require: true
-        },
-        {
-            name: 'links',
-            description: 'Det link, du vil udføre handlingen på!',
-            type: 'STRING',
-            require: true
-        }
     ],
 }
-    ]
-    
-
-
-
 
     await Client.guilds.cache.get(guildId)?.commands.set(data);
-}
+
 
 module.exports = { createCmd }

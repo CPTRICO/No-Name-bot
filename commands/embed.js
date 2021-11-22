@@ -3,8 +3,6 @@ const config = require('../config.json')
 
 module.exports.run = async (Client, message, args, prefix) => {
     if (message.member.permissions.has("KICK_MEMBERS")) {
-
-
             const embed = new Discord.MessageEmbed()
                 .setColor('#0000d1')
                 .setAuthor(config.DiscordServerNavn, config.logo)
