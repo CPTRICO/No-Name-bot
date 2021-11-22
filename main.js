@@ -57,19 +57,5 @@ fs.readdirSync('./events/').forEach(dir => {
     })
 })
 
-Client.on('guildMemberAdd', async guildMember => {
-
-    const velkommen = new discord.MessageEmbed()
-    .setColor('#0099ff')
-    .setTitle(`Velkommen til ${guildMember.guild.name}`)
-    .setAuthor(`${guildMember.guild.name}`, config.Lillelogo)
-    .setDescription(`Hej, <@${guildMember.id}> Velkommen til No Return for at du kan komme ind på serveren skal du være indforstået med at vi altid har retten til at smide folk ud af serveren og at vi forventer at du har læst vores reglsæt før du begynder at gå ind på serveren og efter alle disse ting er ordnet vil jeg tilbyde dig velkommen til! NoReturn [UWL]!*`)
-    .setThumbnail(config.Lillelogo)
-    .setTimestamp()
-    .setFooter(`Ankom `, config.Lillelogo);
-    guildMember.guild.channels.cache.get('907985133758464050').send({ embeds: [velkommen] });
-
-
-})
 
 Client.login(config.Token)

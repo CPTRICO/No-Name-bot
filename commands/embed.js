@@ -5,10 +5,10 @@ module.exports.run = async (Client, message, args, prefix) => {
     if (message.member.permissions.has("KICK_MEMBERS")) {
             const embed = new Discord.MessageEmbed()
                 .setColor('#0000d1')
-                .setAuthor(config.DiscordServerNavn, config.logo)
+                .setAuthor(config.DiscordServerNavn, config.Lillelogo)
                 .setDescription(args.slice(0).join(' '))
                 .setTimestamp()
-                .setFooter(config.DiscordServerNavn, config.logo);
+                .setFooter(config.DiscordServerNavn, config.Lillelogo);
             //message.guild.channels.cache.get('Din Channel id til logs').send(`<@${message.author.id}> Har oprettet en embed`) // Fjern dem her // Hvis du gerne ville have logs på hvem der laver en emved
             message.channel.send({ embeds: [embed] });
             message.delete()
