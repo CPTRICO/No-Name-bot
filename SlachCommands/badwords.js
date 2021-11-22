@@ -1,4 +1,4 @@
-const schema = require('../database/models/guild-schema')
+const schema = require('../../Cptrico´s Butik/database/models/guild-schema')
 const discord = require('discord.js')
 
 module.exports.run = async (inter) => {
